@@ -4,7 +4,8 @@ package io.bna.ccibook.common;
  * Created by brand on 9/16/2016.
  */
 public class LinkedList<T> {
-    private T data;
+    public T data;
+    public boolean isDeleted = false;
     public LinkedList<T> next = null;
 
     public LinkedList(T data) {
