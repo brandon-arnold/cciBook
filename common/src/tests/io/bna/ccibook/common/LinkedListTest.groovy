@@ -51,5 +51,9 @@ class LinkedListTest extends GroovyTestCase {
             assertEquals(strings[i], stringsList.getData());
             stringsList = stringsList.next;
         }
+
+        Character[] chars = "ONETWOTHREEFOUR".toCharArray();
+        LinkedList<Character> charLl = new LinkedList<>(chars);
+        assertEquals(chars.length, charLl.getLength());
     }
 }
