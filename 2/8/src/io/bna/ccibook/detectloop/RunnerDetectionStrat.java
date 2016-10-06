@@ -10,7 +10,7 @@ public class RunnerDetectionStrat implements LoopDetectionStrategy {
     public LinkedList getLoopStart(LinkedList list) {
         LinkedList sRun = list, dRun = list;
         do {
-            if(sRun.next == null || dRun.next == null || dRun.next.next == null) {
+            if(dRun.next == null || dRun.next.next == null) {
                 return null;
             }
             sRun = sRun.next;
