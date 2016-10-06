@@ -51,4 +51,19 @@ public class LinkedList<T> {
         }
         return length;
     }
+
+    public LinkedList<T> getNth(int n) {
+        if(n == 0) {
+            return this;
+        }
+        LinkedList<T> cur = next;
+        while(n > 1) {
+            if(cur == null) {
+                return null;
+            }
+            cur = cur.next;
+            n--;
+        }
+        return cur;
+    }
 }

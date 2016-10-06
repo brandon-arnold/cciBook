@@ -56,4 +56,14 @@ class LinkedListTest extends GroovyTestCase {
         LinkedList<Character> charLl = new LinkedList<>(chars);
         assertEquals(chars.length, charLl.getLength());
     }
+
+    void testGetNth() {
+        LinkedList<Integer> nums = new LinkedList<Integer>(0);
+        LinkedList<Integer> cur1 = nums;
+        for(int i = 1; i < 100; i++) {
+            cur1.next = new LinkedList<Integer>(i);
+            cur1 = cur1.next;
+        }
+        assertEquals(50, nums.getNth(50).data);
+    }
 }
